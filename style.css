@@ -1,0 +1,24 @@
+body {
+  background-color: #f0f8ff;
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 100px;
+}
+
+input, button {
+  font-size: 1.2em;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+h1 {
+  color: #007acc;
+}
+
+#greeting {
+  margin-top: 30px;
+  font-size: 1.5em;
+  color: #333;
+}
