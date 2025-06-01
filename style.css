@@ -2,7 +2,8 @@ body {
   background-color: #f0f8ff;
   font-family: sans-serif;
   text-align: center;
-  padding-top: 100px;
+  padding: 100px 20px 0 20px;  /* 左右加了点内边距，手机不贴边 */
+  box-sizing: border-box;
 }
 
 input, button {
@@ -11,10 +12,13 @@ input, button {
   margin: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  width: 90%;
+  max-width: 300px;  /* 防止在电脑上太宽 */
 }
 
 h1 {
   color: #007acc;
+  font-size: 2em;
 }
 
 #greeting {
