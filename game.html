@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>猜数字游戏</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #fefefe;
+      padding-top: 100px;
+    }
+    input, button {
+      font-size: 1.2em;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 1.3em;
+      color: #333;
+    }
+    a {
+      display: block;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #007acc;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>猜一个 1 到 100 的数字</h1>
+  <input type="number" id="guess" placeholder="输入你的猜测">
+  <button onclick="checkGuess()">提交</button>
+  <div id="message"></div>
+
+  <a href="index.html">← 回到首页</a>
+
+  <script>
+    const secret = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+
+    function checkGuess() {
+      const guess = Number(document.getElementById('guess').value);
+      const message = document.getElementById('message');
+      attempts++;
+
+      if (!guess || guess < 1 || guess > 100) {
+        message.textContent = '请输入 1 到 100 之间的数字';
+        return;
+      }
+
+      if (guess === secret) {
+        message.textContent = `🎉 恭喜你！猜对了，答案就是 ${secret}，你一共猜了 ${attempts} 次。`;
+      } else if (guess < secret) {
+        message.textContent = '太小了，再试试！';
+      } else {
+        message.textContent = '太大了，再试试！';
+      }
+    }
+  </script>
+</body>
+</html>
