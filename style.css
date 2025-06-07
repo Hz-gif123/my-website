@@ -1,11 +1,13 @@
 /* 整体页面背景和布局 */
 body {
+  display: flex;
   background-color: #fefefe;
   font-family: sans-serif;
+  margin: 0;
   padding-top: 100px;
-  margin-left: 0;
+  height: 100vh;
+  box-sizing: border-box;
 }
-
 /* 标题样式 */
 h1 {
   color: #007acc;
