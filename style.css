@@ -2,7 +2,6 @@
 body {
   background-color: #fefefe;
   font-family: sans-serif;
-  text-align: center;
   padding-top: 100px;
   margin-left: 0;
 }
@@ -31,23 +30,6 @@ input, button {
   color: #333;
 }
 
-/* 游戏按钮链接样式 */
-.game-link {
-  display: inline-block;
-  margin-top: 30px;
-  font-size: 1.2em;
-  text-decoration: none;
-  color: #007acc;
-  border: 1px solid #007acc;
-  padding: 10px 20px;
-  border-radius: 8px;
-  transition: 0.2s;
-}
-
-.game-link:hover {
-  background-color: #007acc;
-  color: white;
-}
 
 /* 基本响应式处理：适配手机宽度 */
 @media (max-width: 600px) {
